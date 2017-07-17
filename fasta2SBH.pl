@@ -33,7 +33,7 @@ while (<db>){
 				$ig2def{$ig}=$def;
 			}
 		}
-		if ($line=~/(isogroup[0-9]+)/) { $ig=$1;}
+		if ($line=~/(isogroup\S+)/) { $ig=$1;}
 		elsif ($line=~/^>(comp[0-9]+)/) { $ig=$1; }
 		elsif ($line=~/^>([a-zA-Z0-9]+)/) { $ig=$1; }
 		else { die "stopped: can't decipher fasta header: \n$line\n"; } 
